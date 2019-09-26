@@ -44,7 +44,6 @@ end
 def list_songs_by_artist
   puts "Please enter the name of an artist:"
   input = gets.chomp
-  self.list_songs
 end
 
 end
