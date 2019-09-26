@@ -55,7 +55,7 @@ def list_songs_by_genre
   input = gets.chomp
   if genre = Genre.find_by_name(input)
     genre.songs.uniq.sort{|a,b| a.name <=> b.name}.each_with_index do |song,index| 
-    puts "#{index + 1}. #{song.name} - #{song.genre.name}"
+    puts "#{index + 1}. #{song.artist.name} - #{song.name}"
   end  
 end
 end
