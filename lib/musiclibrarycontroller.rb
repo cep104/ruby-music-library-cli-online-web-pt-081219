@@ -58,5 +58,5 @@ def list_songs_by_genre
     puts "#{index + 1}. #{song.name} - #{song.genre.name}"
   end  
 end
-
+end
 end
