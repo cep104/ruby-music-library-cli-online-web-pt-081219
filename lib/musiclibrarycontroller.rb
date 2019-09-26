@@ -63,7 +63,7 @@ end
 def play_song 
   puts "Which song number would you like to play?"
   input = gets.chomp
-  if (0..Song.all.uniq.length).include?(input.to_i)
+  if (1..Song.all.uniq.length).include?(input.to_i)
     song = Song.all.sort{|a,b| a.name <=> b.name}[input.to_i]
     puts "Playing #{song.name} by #{song.artist.name}"
   end
