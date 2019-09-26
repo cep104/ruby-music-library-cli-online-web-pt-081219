@@ -50,7 +50,6 @@ def list_songs_by_artist
 end
 end
 
-puts list_songs_by_genre 
-end
+
 
 end
