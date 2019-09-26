@@ -65,7 +65,7 @@ def play_song
   input = gets.chomp
   if list_songs.include?(input.to_i)
     song = (0..Song.all.uniq.length).sort{|a,b| a.name <=> b.name}[input.to_i]
-    puts "Playing #{song.name} by #{song.artist}"
+    puts "Playing #{song.name} by #{song.artist.name}"
   end
 end
 end
