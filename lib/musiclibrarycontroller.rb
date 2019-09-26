@@ -41,6 +41,7 @@ end
   end
 end
 
-def 
+def list_songs_by_artist
+end
 
 end
