@@ -65,7 +65,7 @@ def play_song
   input = gets.chomp
   if list_songs.include?(input)
     song = list_songs(input)
-    puts "Playing #{song.name} by #{song.artist.name}"
+    puts "Playing #{song.name} by #{song.artist}"
   end
 end
 end
