@@ -24,7 +24,6 @@ end
   
   def list_songs 
  Song.all.uniq.sort{|a,b| a.name <=> b.name}.each_with_index do |song,index| 
-  # binding.pry
     puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
   end
   end
@@ -45,7 +44,8 @@ def list_songs_by_artist
   puts "Please enter the name of an artist:"
   input = gets.chomp
  artist = Artist.find_by_name(input)
- artist.songs
+ artist.songs.uniq.sort{|a,b| a.name <=> b.name}.each_with_index do |song,index| 
+    puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
 end
 
 end
