@@ -43,7 +43,7 @@ end
 def list_songs_by_artist
   puts "Please enter the name of an artist:"
   input = gets.chomp
- artist = Artist.find_by_name(input)
+ if artist = Artist.find_by_name(input)
  artist.songs.uniq.sort{|a,b| a.name <=> b.name}.each_with_index do |song,index| 
     puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
   end
